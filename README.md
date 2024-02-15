@@ -3,7 +3,7 @@ Project has been written in Java in Spring Boot with Maven.
 
 This project showcases usage of GitHub API to list all user's non-forked repositories and every branch inside them along with most recent commit sha.
 
-To easily present how the Spring Application replies there is example.html file which presents itself as follows.
+To easily present how the Spring Application replies there is example.html file which presents itself as follows. Alternatively tools such as Postman can also be used.
 
 ![](doc/example.png)
 
