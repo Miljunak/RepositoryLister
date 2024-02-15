@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch GitHub Repositories</title>
+</head>
+<body>
+    <h1>Example Lookup GitHub User Repositories</h1>
+    <p>This HTML file has prepared localhost:8080/api/users/{username}/repositories along with required header, everything required is to input the name.</p>
+    <label for="username">GitHub Username:</label>
+    <input type="text" id="username" placeholder="Enter GitHub username">
+    <button id="fetchBtn">Fetch Repositories</button>
+    <pre id="apiResult">Enter a username and click "Fetch Repositories" to see the results here.</pre>
+
+    <script>
+        document.getElementById('fetchBtn').addEventListener('click', function() {
+          const username = document.getElementById('username').value;
+          const apiUrl = `http://localhost:8080/api/users/${username}/repositories`;
+          fetch(apiUrl, {
+            headers: {
+              'Accept': 'application/json'
+            }
+          })
+          .then(response => response.json().then(data => ({ ok: response.ok, status: response.status, body: data })))
+          .then(result => {
+            document.getElementById('apiResult').textContent = JSON.stringify(result.body, null, 2);
+          })
+        });
+      </script>
+      
+</body>
+</html>
