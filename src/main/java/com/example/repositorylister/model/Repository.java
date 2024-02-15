@@ -1,10 +1,9 @@
 package com.example.repositorylister.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Data
+@Getter
 @NoArgsConstructor
 public class Repository {
     private long id;
@@ -12,8 +11,7 @@ public class Repository {
     private boolean fork;
     private Owner owner;
 
-    @Data
-    @NoArgsConstructor
+    @Getter
     public static class Owner {
         private String login;
     }

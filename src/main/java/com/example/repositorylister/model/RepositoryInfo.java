@@ -1,12 +1,11 @@
 package com.example.repositorylister.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
 
 import java.util.List;
 
-@Data
+@Getter
 @AllArgsConstructor
 public class RepositoryInfo {
 

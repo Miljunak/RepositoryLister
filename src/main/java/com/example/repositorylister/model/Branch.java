@@ -12,7 +12,6 @@ public class Branch {
     private Commit commit;
 
     @Getter
-    @NoArgsConstructor
     public static class Commit {
         private String sha;
     }
